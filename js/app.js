@@ -76,16 +76,36 @@ function dreamVehicle(name) {
   alert('My dream car is a hover car. Hahaha! Thanks for playing my game, ' + name);
 }
 
-function favNumber() {
-  let myNumber = prompt('Try to guess my favorite number. Hint: It\'s between 5 and 10.');
-  while (myNumber != '5' && myNumber != '6' && myNumber != '7' && myNumber != '9' && myNumber != '10') {
-    myNumber = prompt('Nope. Not the right number.');
-    let counter = 10;
-    while (counter < 10);
+let myNumber = 8;
+let userPrompt = promt('Try to guess my favorite number. Hint: It\'s between 5 and 10.');
+console.log('User entered a number.')
+while(userPrompt != myNumber) {
+  userPrompt = prompt('Nope. Not the right number. Keep guessing.');
 }
-  console.log('User entered a number.')
-  alert('Nope. Not the right number.')
+if(userPrompt === myNumber){
+  alert('Ding ding ding! You guessed correctly.');
 }
+
+
+
+// function favNumber() {
+//   let myNumber = prompt('Try to guess my favorite number. Hint: It\'s between 5 and 10.');
+//   while (myNumber != '5' && myNumber != '6' && myNumber != '7' && myNumber != '9' && myNumber != '10') {
+//     myNumber = prompt('Nope. Not the right number.');
+//     let counter = 10;
+//     while (counter < 10);
+// }
+//   console.log('User entered a number.')
+//   alert('Nope. Not the right number.')
+// }
+
+
+// this is the teacher's code for reference
+// let foodsILike = ['tatertots', 'juanitas tortilla chips', 'popcorn', 'kale'];
+
+// for (let i = 0; i < foodsILike.length; i++) {
+//   console.log(foodsILike[i]);
+// }
 
 let name = userName();
 let haveVehicle = userVehicle();
