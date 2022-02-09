@@ -62,7 +62,7 @@ function likeVehicle() {
   alert('I like mine.');
 }
 
-function dreamVehicle() {
+function dreamVehicle(name) {
   let dream = prompt('Do you have a dream vehicle?');
   dream = dream.toLowerCase();
   // console.log(dream);
@@ -71,7 +71,7 @@ function dreamVehicle() {
     dream = dream.toLowerCase();
   }
   // console.log('User answered if they have a dream vehicle.')
-  alert('My dream car is a hover car. Hahaha!');
+  alert('My dream car is a hover car. Hahaha! Thanks for playing my game, ' + name);
 }
 
 let name = userName();
@@ -79,4 +79,4 @@ let haveVehicle = userVehicle();
 let color = vehicleColor();
 let vehicleAge = newVehicle();
 let like = likeVehicle();
-let dream = dreamVehicle();
+let dream = dreamVehicle(name);
