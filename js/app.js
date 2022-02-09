@@ -1,3 +1,5 @@
+'use strict'
+
 function userName() {
   let name = prompt('Hello! What\'s your name?');
   name = name.toUpperCase();
