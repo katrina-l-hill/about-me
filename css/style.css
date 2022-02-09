@@ -12,17 +12,17 @@ body {
 }
 
 h1 {
-  margin: 1em 0em; 
+  margin: 1em 0.5em; 
 }
 
 h2, {
-  margin: 3em 0em; 
+  margin: 3em 0.5em; 
 }
 
 p {
-  margin: 1em 0em; 
-} */
+  margin: 1em 0.5em; 
+} 
 
 footer {
-  margin: 8em 0em;
+  margin: 15em 0.5em;
 }
