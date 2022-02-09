@@ -4,7 +4,7 @@
 
 Project Name: About Me  
 
-CHANGE THIS LANGUAGE. I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
+I am creating this project so everyone can get to know me better. I will include information about my background, education, and goals. I'll also include a guessing game you can play. Fun!!
 
 Author: Katrina Hill  
 Links and Resources  
