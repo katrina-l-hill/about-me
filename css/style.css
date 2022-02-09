@@ -1,8 +1,28 @@
+h1 {
+  font-size: 2em;
+}
+
 h2 {
-  color: #ffbfbf;
+  color: red;
+  font-size: 1.5em;
 }
 
 body {
   background-color: aqua;
 }
 
+h1 {
+  margin: 1em 0em; 
+}
+
+h2, {
+  margin: 3em 0em; 
+}
+
+p {
+  margin: 1em 0em; 
+} */
+
+footer {
+  margin: 8em 0em;
+}
