@@ -76,9 +76,21 @@ function dreamVehicle(name) {
   alert('My dream car is a hover car. Hahaha! Thanks for playing my game, ' + name);
 }
 
+function favNumber() {
+  let myNumber = prompt('Try to guess my favorite number. Hint: It\'s between 5 and 10.');
+  while (myNumber != '5' && myNumber != '6' && myNumber != '7' && myNumber != '9' && myNumber != '10') {
+    myNumber = prompt('Nope. Not the right number.');
+    let counter = 10;
+    while (counter < 10);
+}
+  console.log('User entered a number.')
+  alert('Nope. Not the right number.')
+}
+
 let name = userName();
 let haveVehicle = userVehicle();
 let color = vehicleColor();
 let vehicleAge = newVehicle();
 let like = likeVehicle();
 let dream = dreamVehicle(name);
+let myNumber = favNumber();
