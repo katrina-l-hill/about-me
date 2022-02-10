@@ -26,7 +26,7 @@ function userVehicle() {
   return haveVehicle;
 }
 
-function vehicleColor() {
+functio vehicleColor() {
   let color = prompt('Do you have a light-colored vehicle?');
   color = color.toLowerCase();
   // console.log(color);
@@ -41,7 +41,7 @@ function vehicleColor() {
 
 }
 
-function newVehicle() {
+functio newVehicle() {
   let vehicleAge = prompt('Do you have a new vehicle?');
   vehicleAge = vehicleAge.toLowerCase();
   // console.log(vehicleAge);
@@ -56,7 +56,7 @@ function newVehicle() {
 
 }
 
-function likeVehicle() {
+functio likeVehicle() {
   let like = prompt('Do you like your vehicle?');
   like = like.toLowerCase();
   // console.log(like);
@@ -69,7 +69,7 @@ function likeVehicle() {
   return likeVehicle;
 }
 
-function dreamVehicle(name) {
+functio dreamVehicle(name) {
   let dream = prompt('Do you have a dream vehicle?');
   dream = dream.toLowerCase();
   // console.log(dream);
@@ -83,7 +83,7 @@ function dreamVehicle(name) {
 }
 
 
-function myNumber() {
+functio myNumber() {
   let maxTries = 4;
   let numTries = 1;
   let myNumber = '8';
@@ -113,7 +113,7 @@ function myNumber() {
   }
 }
 
-function myFavFruit() {
+functio myFavFruit() {
   let maxAttempt = 6;
   let numAttempt = 1;
   let myFavFruit = ['plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes'];
