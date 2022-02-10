@@ -26,7 +26,7 @@ function userVehicle() {
   return haveVehicle;
 }
 
-functio vehicleColor() {
+function vehicleColor() {
   let color = prompt('Do you have a light-colored vehicle?');
   color = color.toLowerCase();
   // console.log(color);
