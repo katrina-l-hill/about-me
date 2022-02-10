@@ -1,4 +1,5 @@
 'use strict';
+let correctCount = 0;
 
 function userName() {
   let name = prompt('Hello! What\'s your name?');
@@ -16,7 +17,7 @@ function userVehicle() {
   let haveVehicle = prompt('Do you have a vehicle?');
   haveVehicle = haveVehicle.toLowerCase();
   // console.log(haveVehicle);
-  while (haveVehicle != 'y' && haveVehicle != 'n') {
+  while (haveVehicle !== 'y' && haveVehicle !== 'n') {
     haveVehicle = prompt('Sorry. You must enter a "y" or "n".');
     haveVehicle = haveVehicle.toLowerCase();
   }
@@ -29,7 +30,7 @@ function vehicleColor() {
   let color = prompt('Do you have a light-colored vehicle?');
   color = color.toLowerCase();
   // console.log(color);
-  while (color != 'y' && color != 'n') {
+  while (color !== 'y' && color !== 'n') {
     color = prompt('Sorry. You must enter a "y" or "n".');
     color = color.toLowerCase();
   }
@@ -44,7 +45,7 @@ function newVehicle() {
   let vehicleAge = prompt('Do you have a new vehicle?');
   vehicleAge = vehicleAge.toLowerCase();
   // console.log(vehicleAge);
-  while (vehicleAge != 'y' && vehicleAge != 'n') {
+  while (vehicleAge !== 'y' && vehicleAge !== 'n') {
     vehicleAge = prompt('Sorry. You must enter a "y" or "n".');
     vehicleAge = vehicleAge.toLowerCase();
   }
@@ -59,7 +60,7 @@ function likeVehicle() {
   let like = prompt('Do you like your vehicle?');
   like = like.toLowerCase();
   // console.log(like);
-  while (like != 'y' && like != 'n') {
+  while (like !== 'y' && like !== 'n') {
     like = prompt('Sorry. You must enter a "y" or "n".');
     like = like.toLowerCase();
   }
@@ -72,7 +73,7 @@ function dreamVehicle(name) {
   let dream = prompt('Do you have a dream vehicle?');
   dream = dream.toLowerCase();
   // console.log(dream);
-  while (dream != 'y' && dream != 'n') {
+  while (dream !== 'y' && dream !== 'n') {
     dream = prompt('Sorry. You must enter a "y" or "n".');
     dream = dream.toLowerCase();
   }
@@ -81,74 +82,81 @@ function dreamVehicle(name) {
   return dream;
 }
 
-let name = userName();
-let haveVehicle = userVehicle();
-let color = vehicleColor();
-let vehicleAge = newVehicle();
-let like = likeVehicle();
-let dream = dreamVehicle(name);
 
-let correctCount = 0;
-let maxTries = 4;
-let numTries = 1;
-let myNumber = 8;
-let userResponse = prompt('Try to guess my favorite number. Hint: It\'s between 5 and 10.')
-console.log('User entered their number.')
-while (userResponse != myNumber && numTries < maxTries) {
-  if (userResponse > myNumber) {
-    userResponse = prompt('Too high. Try again.');
+function myNumber() {
+  let maxTries = 4;
+  let numTries = 1;
+  let myNumber = '8';
+  let correctNumber = 0;
+  let userResponse = prompt('Try to guess my favorite number. Hint: It\'s between 5 and 10.');
+  console.log('User entered their number.');
+  while (userResponse !== myNumber && numTries < maxTries) {
+    if (userResponse > myNumber) {
+      userResponse = prompt('Too high. Try again.');
+    }
+    else if (userResponse < myNumber) {
+      userResponse = prompt('Too low. Try again.');
+
+      numTries++;
+    } else {
+      alert('Bummer, game ovekatrianr. You didn\'t guess correctly. My favorite number is 8.');
+    }
   }
-  else if (userResponse < myNumber) {
-    userResponse = prompt('Too low. Try again.');
-  }
-  numTries++;
-}
-if (numTries < maxTries) {
-  alert('You got it. Way to go!');
-  correctCount++;
-}
-else {
-  alert('Bummer, game ovekatrianr. You didn\'t guess correctly. My favorite number is 8.');
-}
-
-
-
-let maxAttempt = 6;
-let numAttempt = 1;
-let myFavFruit = ['plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes'];
-let userAns = prompt('Try to guess my favorite fruit.');
-console.log('User entered their fruit guess.')
-let isCorrectAnswer = false;
-for (let i = 0; i < 7; i++) {
-  if (userAns === myFavFruit[i]) {
-    isCorrectAnswer = true;
+  if (userResponse === myNumber) {
+    correctNumber++;
+    correctCount++;
+    if (correctNumber === 1) {
+      console.log(correctCount);
+      console.log(typeof correctCount);
+      alert('You got it. Way to go!');
+    }
   }
 }
-while (!isCorrectAnswer && numAttempt < maxAttempt) {
-  userAns = prompt('Nope. Not right. Try again.');
-  isCorrectAnswer = false;
+
+function myFavFruit() {
+  let maxAttempt = 6;
+  let numAttempt = 1;
+  let myFavFruit = ['plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes'];
+  let userAns = prompt('Try to guess my favorite fruit.');
+  console.log('User entered their fruit guess.');
+  let isCorrectAnswer = false;
   for (let i = 0; i < 7; i++) {
     if (userAns === myFavFruit[i]) {
       isCorrectAnswer = true;
     }
   }
-  numAttempt++;
+  while (!isCorrectAnswer && numAttempt < maxAttempt) {
+    userAns = prompt('Nope. Not right. Try again.');
+    isCorrectAnswer = false;
+    for (let i = 0; i < 7; i++) {
+      if (userAns === myFavFruit[i]) {
+        isCorrectAnswer = true;
+      }
+    }
+    numAttempt++;
+  }
+  let favoriteFruits = '';
+  for (let i = 0; i < 7; i++) {
+    favoriteFruits = favoriteFruits + ' ' + myFavFruit[i];
+  }
+  if (isCorrectAnswer && numAttempt <= maxAttempt) {
+    alert('Alright! You got it! You could have chosen any of these:' + favoriteFruits);
+    correctCount++;
+  }
+  else {
+
+    alert('Yikes. You didn\'t guess correctly. You could have chosen any of these:' + favoriteFruits);
+  }
 }
-let favoriteFruits = "";
-for (let i = 0; i < 7; i++) {
-  favoriteFruits = favoriteFruits + " " + myFavFruit[i];
-}
-if (isCorrectAnswer && numAttempt <= maxAttempt) {
-  alert('Alright! You got it! You could have chosen any of these:' + favoriteFruits);
-  correctCount++;
-}
-else {
-
-  alert('Yikes. You didn\'t guess correctly. You could have chosen any of these:' + favoriteFruits);
-}
-
-alert("you got " + correctCount + " answers correct!");
 
 
+userName();
+userVehicle();
+vehicleColor();
+newVehicle();
+likeVehicle();
+dreamVehicle(name);
+myNumber();
+myFavFruit();
 
-
+alert('you got ' + correctCount + ' answers correct!');
