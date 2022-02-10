@@ -98,31 +98,34 @@ else {
 
 let maxAttempt = 6;
 let numAttempt = 1;
-let myFavFruit = ['plum', 'apple', 'kiwi'];
+let myFavFruit = ['plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes'];
 let userAns = prompt('Try to guess my favorite fruit.');
 let isCorrectAnswer = false;
-for (let j = 0; j < 3; j++) {
+for (let i = 0; i < 7; i++) {
   if (userAns === myFavFruit[j]) {
     isCorrectAnswer = true;
   }
 }
 while (!isCorrectAnswer && numAttempt < maxAttempt) {
-  userAns = prompt('Try again.');
+  userAns = prompt('Nope. Not right. Try again.');
   isCorrectAnswer = false;
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 7; i++) {
     if (userAns === myFavFruit[i]) {
       isCorrectAnswer = true;
     }
   }
   numAttempt++;
 }
-if(isCorrectAnswer && numAttempt <= maxAttempt)
-{
-  alert('Alright! You got it!');
+let favoriteFruits = "";
+for (let i = 0; i < 7; i++) {
+  favoriteFruits = favoriteFruits + " " + myFavFruit[i];
 }
-else
-{
-  alert('Yikes. You didn\'t get it correct. It was a plum.');
+if (isCorrectAnswer && numAttempt <= maxAttempt) {
+  alert('Alright! You got it! You could have chosen any of these:' + favoriteFruits);
+}
+else {
+
+  alert('Yikes. You didn\'t guess correctly. You could have chosen any of these:' + favoriteFruits);
 }
 
 let name = userName();
