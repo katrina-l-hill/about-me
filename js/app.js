@@ -113,7 +113,7 @@ function myNumber() {
   }
 }
 
-functio myFavFruit() {
+function myFavFruit() {
   let maxAttempt = 6;
   let numAttempt = 1;
   let myFavFruit = ['plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes'];
