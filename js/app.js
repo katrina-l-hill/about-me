@@ -80,32 +80,55 @@ let maxTries = 4;
 let numTries = 1;
 let myNumber = 8;
 let userResponse = prompt('Try to guess my favorite number. Hint: It\'s between 5 and 10.')
-while(userResponse != myNumber && numTries < maxTries)
-{
-  if(userResponse > myNumber)
-  {
+while (userResponse != myNumber && numTries < maxTries) {
+  if (userResponse > myNumber) {
     userResponse = prompt('Too high. Try again.');
   }
-  else if(userResponse < myNumber)
-  {
+  else if (userResponse < myNumber) {
     userResponse = prompt('Too low. Try again.');
   }
   numTries++;
 }
-if(numTries < maxTries)
-{
+if (numTries < maxTries) {
   alert('You got it. Way to go!');
+}
+else {
+  alert('Bummer, game over. You didn\'t guess correctly. My favorite number is 8.');
+}
+
+let maxAttempt = 6;
+let numAttempt = 1;
+let myFavFruit = ['plum', 'apple', 'kiwi'];
+let userAns = prompt('Try to guess my favorite fruit.');
+let isCorrectAnswer = false;
+for (let j = 0; j < 3; j++) {
+  if (userAns === myFavFruit[j]) {
+    isCorrectAnswer = true;
+  }
+}
+while (!isCorrectAnswer && numAttempt < maxAttempt) {
+  userAns = prompt('Try again.');
+  isCorrectAnswer = false;
+  for (let i = 0; i < 3; i++) {
+    if (userAns === myFavFruit[i]) {
+      isCorrectAnswer = true;
+    }
+  }
+  numAttempt++;
+}
+if(isCorrectAnswer && numAttempt <= maxAttempt)
+{
+  alert('Alright! You got it!');
 }
 else
 {
-  alert('Bummer, game over. You didn\'t guess correctly. My favorite number is 8.');
+  alert('Yikes. You didn\'t get it correct. It was a plum.');
 }
- 
-  
-  let name = userName();
-  let haveVehicle = userVehicle();
-  let color = vehicleColor();
-  let vehicleAge = newVehicle();
-  let like = likeVehicle();
-  let dream = dreamVehicle(name);
-   
+
+let name = userName();
+let haveVehicle = userVehicle();
+let color = vehicleColor();
+let vehicleAge = newVehicle();
+let like = likeVehicle();
+let dream = dreamVehicle(name);
+
