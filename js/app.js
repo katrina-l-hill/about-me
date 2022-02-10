@@ -69,7 +69,7 @@ function likeVehicle() {
   return likeVehicle;
 }
 
-functio dreamVehicle(name) {
+function dreamVehicle(name) {
   let dream = prompt('Do you have a dream vehicle?');
   dream = dream.toLowerCase();
   // console.log(dream);
