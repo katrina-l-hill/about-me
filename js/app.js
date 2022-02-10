@@ -41,7 +41,7 @@ function vehicleColor() {
 
 }
 
-functio newVehicle() {
+function newVehicle() {
   let vehicleAge = prompt('Do you have a new vehicle?');
   vehicleAge = vehicleAge.toLowerCase();
   // console.log(vehicleAge);
