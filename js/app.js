@@ -10,6 +10,7 @@ function userName() {
   name = name.toUpperCase();
   // console.log('User entered their name: ' + name);
   alert('Welcome ' + name + '!');
+  return name;
 }
 
 function userVehicle() {
@@ -22,6 +23,7 @@ function userVehicle() {
   }
   // console.log('User told me if they like their vehicle.')
   alert('I have a vehicle.');
+  return haveVehicle;
 }
 
 function vehicleColor() {
@@ -35,6 +37,7 @@ function vehicleColor() {
 
   // console.log('User replied on what color vehicle they have.')
   alert('I have a dark blue car.');
+  return color;
 
 }
 
@@ -49,6 +52,7 @@ function newVehicle() {
 
   // console.log('User replied if they have a new vehicle.')
   alert('My vehicle is 5 years old.');
+  return vehicleAge;
 
 }
 
@@ -62,6 +66,7 @@ function likeVehicle() {
   }
   // console.log('User answered if they like their vehicle.')
   alert('I like mine.');
+  return likeVehicle;
 }
 
 function dreamVehicle(name) {
@@ -74,12 +79,22 @@ function dreamVehicle(name) {
   }
   // console.log('User answered if they have a dream vehicle.')
   alert('My dream car is a hover car. Hahaha! Thanks for playing my game, ' + name);
+  return dream;
 }
 
+let name = userName();
+let haveVehicle = userVehicle();
+let color = vehicleColor();
+let vehicleAge = newVehicle();
+let like = likeVehicle();
+let dream = dreamVehicle(name);
+
+let correctCount = 0;
 let maxTries = 4;
 let numTries = 1;
 let myNumber = 8;
 let userResponse = prompt('Try to guess my favorite number. Hint: It\'s between 5 and 10.')
+console.log('User entered their number.')
 while (userResponse != myNumber && numTries < maxTries) {
   if (userResponse > myNumber) {
     userResponse = prompt('Too high. Try again.');
@@ -91,18 +106,22 @@ while (userResponse != myNumber && numTries < maxTries) {
 }
 if (numTries < maxTries) {
   alert('You got it. Way to go!');
+  correctCount++;
 }
 else {
-  alert('Bummer, game over. You didn\'t guess correctly. My favorite number is 8.');
+  alert('Bummer, game ovekatrianr. You didn\'t guess correctly. My favorite number is 8.');
 }
+
+
 
 let maxAttempt = 6;
 let numAttempt = 1;
 let myFavFruit = ['plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes'];
 let userAns = prompt('Try to guess my favorite fruit.');
+console.log('User entered their fruit guess.')
 let isCorrectAnswer = false;
 for (let i = 0; i < 7; i++) {
-  if (userAns === myFavFruit[j]) {
+  if (userAns === myFavFruit[i]) {
     isCorrectAnswer = true;
   }
 }
@@ -122,16 +141,15 @@ for (let i = 0; i < 7; i++) {
 }
 if (isCorrectAnswer && numAttempt <= maxAttempt) {
   alert('Alright! You got it! You could have chosen any of these:' + favoriteFruits);
+  correctCount++;
 }
 else {
 
   alert('Yikes. You didn\'t guess correctly. You could have chosen any of these:' + favoriteFruits);
 }
 
-let name = userName();
-let haveVehicle = userVehicle();
-let color = vehicleColor();
-let vehicleAge = newVehicle();
-let like = likeVehicle();
-let dream = dreamVehicle(name);
+alert("you got " + correctCount + " answers correct!");
+
+
+
 
