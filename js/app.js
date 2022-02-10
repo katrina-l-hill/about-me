@@ -56,7 +56,7 @@ function newVehicle() {
 
 }
 
-functio likeVehicle() {
+function likeVehicle() {
   let like = prompt('Do you like your vehicle?');
   like = like.toLowerCase();
   // console.log(like);
