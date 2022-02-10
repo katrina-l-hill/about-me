@@ -83,7 +83,7 @@ function dreamVehicle(name) {
 }
 
 
-functio myNumber() {
+function myNumber() {
   let maxTries = 4;
   let numTries = 1;
   let myNumber = '8';
