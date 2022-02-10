@@ -2,7 +2,6 @@
 
 function userName() {
   let name = prompt('Hello! What\'s your name?');
-  name = name.toUpperCase();
   while (name === '' || name === null) {
     name = prompt('Sorry. You must enter your name.');
     name = name.toUpperCase();
