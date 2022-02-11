@@ -99,7 +99,7 @@ function myNumber() {
 
       numTries++;
     } else {
-      alert('Bummer, game ovekatrianr. You didn\'t guess correctly. My favorite number is 8.');
+      alert('Bummer, game over. You didn\'t guess correctly. My favorite number is 8.');
     }
   }
   if (userResponse === myNumber) {
@@ -150,9 +150,6 @@ function myFavFruits() {
 }
 
 
-arrQuestions();
-arrAnswers();
-arrPosResponses();
 userName();
 userVehicle();
 vehicleColor();
