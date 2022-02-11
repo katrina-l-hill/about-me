@@ -149,8 +149,6 @@ function myFavFruits() {
   }
 }
 
-let arrQuestions = ['Do you have a vehicle?', 'Do you have a light-colored vehicle?', 'Do you have a new vehicle?', 'Do you like your vehicle?', 'Do you have a dream vehicle?', 'Try to guess my favorite number.', 'Try to guess my favorite fruits.']
-let arrAnswers = ['y', 'n', 'y', 'n', 'y', 'n', 'y', 'n', 'y', 'n', '5', '6', '7', '8', '9', '10','plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes']
 
 arrQuestions();
 arrAnswers();
