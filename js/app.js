@@ -113,15 +113,15 @@ function myNumber() {
   }
 }
 
-function myFavFruit() {
+function myFavFruits() {
   let maxAttempt = 6;
   let numAttempt = 1;
-  let myFavFruit = ['plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes'];
-  let userAns = prompt('Try to guess my favorite fruit.');
+  let myFavFruits = ['plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes'];
+  let userAns = prompt('Try to guess my favorite fruits.');
   console.log('User entered their fruit guess.');
   let isCorrectAnswer = false;
   for (let i = 0; i < 7; i++) {
-    if (userAns === myFavFruit[i]) {
+    if (userAns === myFavFruits[i]) {
       isCorrectAnswer = true;
     }
   }
@@ -129,7 +129,7 @@ function myFavFruit() {
     userAns = prompt('Nope. Not right. Try again.');
     isCorrectAnswer = false;
     for (let i = 0; i < 7; i++) {
-      if (userAns === myFavFruit[i]) {
+      if (userAns === myFavFruits[i]) {
         isCorrectAnswer = true;
       }
     }
@@ -137,7 +137,7 @@ function myFavFruit() {
   }
   let favoriteFruits = '';
   for (let i = 0; i < 7; i++) {
-    favoriteFruits = favoriteFruits + ' ' + myFavFruit[i];
+    favoriteFruits = favoriteFruits + ' ' + myFavFruits[i];
   }
   if (isCorrectAnswer && numAttempt <= maxAttempt) {
     alert('Alright! You got it! You could have chosen any of these:' + favoriteFruits);
@@ -149,7 +149,12 @@ function myFavFruit() {
   }
 }
 
+let arrQuestions = ['Do you have a vehicle?', 'Do you have a light-colored vehicle?', 'Do you have a new vehicle?', 'Do you like your vehicle?', 'Do you have a dream vehicle?', 'Try to guess my favorite number.', 'Try to guess my favorite fruits.']
+let arrAnswers = ['y', 'n', 'y', 'n', 'y', 'n', 'y', 'n', 'y', 'n', '5', '6', '7', '8', '9', '10','plum', 'apple', 'kiwi', 'peach', 'strawberry', 'pear', 'grapes']
 
+arrQuestions();
+arrAnswers();
+arrPosResponses();
 userName();
 userVehicle();
 vehicleColor();
@@ -157,6 +162,6 @@ newVehicle();
 likeVehicle();
 dreamVehicle(name);
 myNumber();
-myFavFruit();
+myFavFruits();
 
 alert('you got ' + correctCount + ' answers correct!');
