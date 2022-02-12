@@ -2,6 +2,11 @@ h1 {
   background-color: rgba(30, 143, 255, 0.445);
   font-size: 2em;
   font-family: Arial, Helvetica, sans-serif;
+  border-style: ridge;
+  border-width: 2px;
+  padding: 10px 8px 6px 4px;
+  text-align: center;
+  inline-size:auto;
 }
 
 h2 {
@@ -9,11 +14,18 @@ h2 {
   background-color: deepskyblue;
   font-size: 1.5em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: ridge;
+  border-width: 2px;
+  padding: 10px 8px 6px 4px;
+  text-align: center;
 }
 
 body {
   background-color: aqua;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-style: ridge;
+  border-width: 2px;
+  padding: 10px 8px 6px 4px;
 }
 
 h1 {
@@ -29,6 +41,9 @@ p {
   background-color: rgba(39, 139, 0, 0.507);
   margin: 2em 0.5em;
   font-family: 'Courier New', Courier, monospace; 
+  border-style: ridge;
+  border-width: 2px;
+  padding: 10px 8px 6px 4px;
 } 
 
 footer {
@@ -40,16 +55,23 @@ footer {
 ol, li, ul {
   margin: 2em 0.5em;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
 
 ol {
   background-color: plum;
   list-style-type: decimal;
   list-style-position: inside;
+  border-style: ridge;
+  border-width: 2px;
+  padding: 10px 8px 6px 4px;
 }
 
 ul {
   background-color: yellow;
   list-style-type:circle;
   list-style-position: inside;
+  border-style: ridge;
+  border-width: 2px;
+  padding: 10px 8px 6px 4px;
 }
