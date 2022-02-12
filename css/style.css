@@ -1,9 +1,11 @@
 h1 {
+  background-color: dodgerblue;
   font-size: 2em;
 }
 
 h2 {
   color: red;
+  background-color: deepskyblue;
   font-size: 1.5em;
 }
 
@@ -16,14 +18,17 @@ h1 {
 }
 
 h2 {
+  background-color: orange;
   margin: 3em 0.5em; 
 }
 
 p {
+  background-color: darkred;
   margin: 2em 0.5em; 
 } 
 
 footer {
+  background-color: violet;
   margin: 6em 0.5em;
 }
 
@@ -32,11 +37,13 @@ ol, li, ul {
 }
 
 ol {
+  background-color: plum;
   list-style-type: decimal;
   list-style-position: inside;
 }
 
 ul {
+  background-color: yellow;
   list-style-type:circle;
   list-style-position: inside;
 }
